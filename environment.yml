@@ -1,0 +1,14 @@
+name: mc_methods_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - matplotlib
+  - scipy
+  - ipykernel 
+  - ipython
+ 
+  - pip
+  - pip:
+      - git+https://github.com/jlederer1/DKST.git@main
