@@ -34,7 +34,7 @@ This demo is compatible with **Python 3.XX+**. It is recommended to use a virtua
    ```bash
    git clone https://github.com/jlederer1/MC_methods
    cd MC_methods
-   ´´´
+   ```
 
 2. ### Setup Conda for Windows & macOS
    ##### **Miniforge (Apple Silicon optimized) - Recommended**
@@ -55,14 +55,14 @@ This demo is compatible with **Python 3.XX+**. It is recommended to use a virtua
    ```bash
    conda create -n cidl_mc_env python=3.9
    conda activate cidl_mc_env
-   ´´´
+   ```
 
 4. Install dependancies via the provided yml and post_install.sh or from the terminal directly:
    ```bash 
    conda env update --file environment.yml
    source post_install.sh
    ```
-   or
+   or manually:
    ```bash
    conda install ipykernel numpy matplotlib scipy ipython
    conda install pytorch==2.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
