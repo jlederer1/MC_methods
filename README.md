@@ -23,9 +23,10 @@ The notebook `MCMC-sampling_discrete` demonstates an adaption of the Metropolis-
 
 ### MC Dropout (MCDP)
 
-The notebook `...` focuses on MCDP, a technique used to estimate model uncertainty in deep learning. It demonstrates how to implement MC Dropout in a neural network to evaluate its performance. The notebook includes code to train/load the model, apply dropout during inference, and analyzing the results. 
+The notebook `MC-dropout_deterministic` focuses on MCDP, a technique used to estimate model uncertainty in deep learning. It demonstrates how to implement MC Dropout in a neural network to evaluate its performance. In this case a concolutional net was trained on a determnisitic classification task (cifar-10). The notebook includes code to train/load the model, apply dropout during inference, and analyzing the results. Due to bad training results, the MCDP evaluation yields no meaningful results, though.
 
-The notebook also applies MCDP to a probabilitic transformer DL model designed for data-analysis in "Knowledge Space Theory". In this case it significantly enhances prediction accuracy, as the nature of the task itself is probabilistic, i.e. knowledge structures are inherently uncertain, and different knowledge states may lead to the same observable responses.
+The notebook `MC-dropout_probabilistic` applies MCDP to a probabilitic transformer model designed for representation learning in "Knowledge Space Theory". The output of the model is a sequence of tokens. The symmetric difference of target sequence and generated sequences is the performance metric. In this case MCDP was used to improve the decoder's predictions through majority votes over multiple stochastic forward passes.
+It significantly enhances prediction accuracy, as the nature of the task itself is probabilistic, i.e. knowledge structures are inherently uncertain, and different knowledge states (model output) may correspond to the same observable responses (model input).
 
 ## Setup 
 This demo is compatible with **Python 3.XX+**. It is recommended to use a virtual environment to manage dependencies.
@@ -62,10 +63,10 @@ This demo is compatible with **Python 3.XX+**. It is recommended to use a virtua
    conda env update --file environment.yml
    source post_install.sh
    ```
-   or manually:
+   or manually on windows:
    ```bash
-   conda install ipykernel numpy matplotlib scipy ipython
-   conda install pytorch==2.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+   conda install -c conda-forge python=3.9 numpy matplotlib scipy ipykernel ipython scikit-learn pip
+   conda install -c conda-forge pytorch==2.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
    pip install --no-cache-dir git+https://github.com/jlederer1/DKST.git@main
    ```
    
