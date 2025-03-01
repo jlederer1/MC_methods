@@ -1,4 +1,4 @@
-name: mc_methods_env
+name: cidl_mc_env
 channels:
   - conda-forge
 dependencies:
@@ -6,9 +6,10 @@ dependencies:
   - numpy
   - matplotlib
   - scipy
+  - torchvision
   - ipykernel 
   - ipython
- 
+  - scikit-learn
   - pip
   - pip:
       - git+https://github.com/jlederer1/DKST.git@main
