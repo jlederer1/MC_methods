@@ -69,4 +69,13 @@ This demo is compatible with **Python 3.XX+**. It is recommended to use a virtua
    conda install -c conda-forge pytorch==2.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
    pip install --no-cache-dir git+https://github.com/jlederer1/DKST.git@main
    ```
-   
+5. Download Models and Dataset
+
+   Some of the notebooks require the trained models and synthetic datasets to run. Please download the necessary files from MyShare:
+
+   [Download Models and Datasets](https://myshare.uni-osnabrueck.de/d/a59c01dbfaf14769bb2d/)
+
+   After downloading, place the files into the appropriate directories:
+
+   - Models: `data/models/`
+   - Datasets: `data/datasets/`
